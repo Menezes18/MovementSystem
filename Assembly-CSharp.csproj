@@ -45,6 +45,7 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.10f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\InputActions\Chacaracters\Player\PlayerInputActions.cs" />
      <Compile Include="Assets\Scripts\Characters\Player\StateMachine\States\Grounded\PlayerIdlingState.cs" />
      <Compile Include="Assets\Scripts\Characters\Player\StateMachine\States\Grounded\StateMachine\IState.cs" />
      <Compile Include="Assets\Scripts\Characters\Player\Player.cs" />
@@ -52,6 +53,7 @@
      <Compile Include="Assets\Animations\Characters\Player\NewBehaviourScript.cs" />
      <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
      <Compile Include="Assets\Scripts\Characters\Player\StateMachine\States\Grounded\Moving\PlayerWalkingState.cs" />
+     <Compile Include="Assets\Scripts\Characters\Player\Utilities\Input\PlayerInput.cs" />
      <Compile Include="Assets\Scripts\Characters\Player\StateMachine\States\Grounded\Moving\PlayerSprintingState.cs" />
      <Compile Include="Assets\Scripts\Characters\Player\StateMachine\States\Grounded\StateMachine\StateMachine.cs" />
      <Compile Include="Assets\Scripts\Characters\Player\StateMachine\PlayerMovementStateMachine.cs" />
@@ -95,6 +97,7 @@
      <Folder Include="Assets\Materials\Prototype Textures\Materials\Red" />
      <None Include="Library\PackageCache\com.unity.timeline@1.7.5\ValidationExceptions.json" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.2.0\package.json" />
+     <Folder Include="Assets\InputActions" />
      <Folder Include="Library\PackageCache\com.unity.timeline@1.7.5" />
      <Folder Include="Assets\Scripts\Characters" />
      <Folder Include="Assets\Materials\Prototype Textures\Textures\Pink" />
@@ -120,6 +123,7 @@
      <Folder Include="Assets\Scripts\Characters\Player\StateMachine\States\Grounded\StateMachine" />
      <Folder Include="Assets\Materials\Prototype Textures\Materials\Yellow" />
      <None Include="Library\PackageCache\com.unity.visualscripting@1.9.0\ValidationExceptions.json" />
+     <Folder Include="Assets\InputActions\Chacaracters" />
      <None Include="Library\PackageCache\com.unity.ide.visualstudio@2.0.18\ValidationExceptions.json" />
      <Folder Include="Assets\Scripts\Characters\Player\StateMachine\States\Grounded\Moving" />
      <Folder Include="Assets\Scripts\Characters\Player\StateMachine\States" />
@@ -128,6 +132,7 @@
      <Folder Include="Assets\Animations\Characters\Player\Clips\Grounded" />
      <Folder Include="Library\PackageCache\com.unity.mathematics@1.2.6" />
      <None Include="Library\PackageCache\com.unity.inputsystem@1.7.0\ValidationExceptions.json" />
+     <Folder Include="Assets\Scripts\Characters\Player\Utilities" />
      <Folder Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Editor Resources\Gizmos" />
      <Folder Include="Library\PackageCache\com.unity.collab-proxy@2.2.0" />
      <Folder Include="Assets\Materials\Prototype Textures\Textures\Red" />
@@ -163,9 +168,11 @@
      <Folder Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Package Resources" />
      <Folder Include="Assets\Materials\Prototype Textures\Demo" />
      <None Include="Library\PackageCache\com.unity.burst@1.8.8\Unity.Burst.Unsafe.xml" />
+     <Folder Include="Assets\InputActions\Chacaracters\Player" />
      <None Include="Library\PackageCache\com.unity.burst@1.8.8\package.json" />
      <Folder Include="Assets\Materials\Prototype Textures\Demo\Demo meshes" />
      <Folder Include="Assets\Models\Characters\Player" />
+     <Folder Include="Assets\Scripts\Characters\Player\Utilities\Input" />
      <Folder Include="Library\PackageCache\com.unity.cinemachine@2.9.7\Presets\Noise" />
      <None Include="Library\PackageCache\com.unity.ide.vscode@1.2.5\package.json" />
      <Folder Include="Assets\Materials\Prototype Textures\Textures" />

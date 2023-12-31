@@ -5,14 +5,20 @@ using UnityEngine;
 
 namespace MenezesMovementSystem
 {
+    [RequireComponent(typeof(PlayerInput))] // agora quando adiciona o script para o player(gameobject)  ele sempre adicionar o player input
     public class Player : MonoBehaviour
     {
+        
+        public Rigidbody Rigidbody { get; private set; }
+        public PlayerInput Input { get; private set; }
         private PlayerMovementStateMachine _movementStateMachine; //chamando a ref do state machine para passar os parametros 
 
 
         private void Awake()
         {
-            _movementStateMachine = new PlayerMovementStateMachine();
+            Rigidbody = GetComponent<Rigidbody>();
+            Input = GetComponent<PlayerInput>(); // 
+            _movementStateMachine = new PlayerMovementStateMachine(this);
         }
 
         private void Start()

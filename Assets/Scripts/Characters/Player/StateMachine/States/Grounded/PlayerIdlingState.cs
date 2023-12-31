@@ -6,6 +6,9 @@ namespace MenezesMovementSystem
 {
     public class PlayerIdlingState : PlayerMovementState
     {
-
+        public PlayerIdlingState(PlayerMovementStateMachine playerMovementStateMachine) : base(playerMovementStateMachine)
+        {
+            
+        }
     }
 }
