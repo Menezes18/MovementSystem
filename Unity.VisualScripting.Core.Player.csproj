@@ -59,8 +59,8 @@
      <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Runtime\VisualScripting.Core\Graphs\IGraphDebugData.cs" />
      <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Runtime\VisualScripting.Core\Dependencies\FullSerializer\fsIgnoreAttribute.cs" />
      <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Runtime\VisualScripting.Core\Dependencies\FullSerializer\fsConverter.cs" />
-     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Runtime\VisualScripting.Core\Events\EventHook.cs" />
      <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Runtime\VisualScripting.Core\Listeners\MonoBehaviour\UnityOnTriggerStayMListener.cs" />
+     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Runtime\VisualScripting.Core\Events\EventHook.cs" />
      <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Runtime\VisualScripting.Core\Variables\VariableDeclarationsCloner.cs" />
      <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Runtime\VisualScripting.Core\Reflection\Operators\IncrementHandler.cs" />
      <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Runtime\VisualScripting.Core\EditorBinding\TypeIconPriorityAttribute.cs" />

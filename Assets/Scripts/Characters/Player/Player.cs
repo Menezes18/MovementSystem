@@ -10,6 +10,7 @@ namespace MenezesMovementSystem
     {
         
         public Rigidbody Rigidbody { get; private set; }
+        public Transform MainCameraTransform { get; private set; }
         public PlayerInput Input { get; private set; }
         private PlayerMovementStateMachine _movementStateMachine; //chamando a ref do state machine para passar os parametros 
 
@@ -18,6 +19,7 @@ namespace MenezesMovementSystem
         {
             Rigidbody = GetComponent<Rigidbody>();
             Input = GetComponent<PlayerInput>(); // 
+            MainCameraTransform = Camera.main.transform;
             _movementStateMachine = new PlayerMovementStateMachine(this);
         }
 

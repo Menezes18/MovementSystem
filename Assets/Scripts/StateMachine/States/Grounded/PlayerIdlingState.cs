@@ -10,5 +10,12 @@ namespace MenezesMovementSystem
         {
             
         }
+
+        public override void Enter()
+        {
+            base.Enter();
+            speedModifier = 0f;
+            
+        }
     }
 }
