@@ -9,43 +9,37 @@ namespace MenezesMovementSystem
     {
         public PlayerGroundedState(PlayerMovementStateMachine playerMovementStateMachine) : base(playerMovementStateMachine)
         {
-            
         }
-        #region Reutilizaveis
 
-        protected override void AddInputActionsCallback()
+        protected override void AddInputActionsCallbacks()
         {
-            base.AddInputActionsCallback();
+            base.AddInputActionsCallbacks();
+
             stateMachine.Player.Input.PlayerActions.Movement.canceled += OnMovementCanceled;
         }
 
-
-        protected override void RemoveInputActionsCallBack()
+        protected override void RemoveInputActionsCallbacks()
         {
-            
-            base.RemoveInputActionsCallBack();
+            base.RemoveInputActionsCallbacks();
+
             stateMachine.Player.Input.PlayerActions.Movement.canceled -= OnMovementCanceled;
         }
-        protected virtual void OnMove()
-        {
-            if (shouldWalk)
-            {
-                stateMachine.ChangeState(stateMachine.WalkingState);
-                return;
-            }
-            stateMachine.ChangeState(stateMachine.RunningState);
-        }
-        
 
-        #endregion
-        // METODOS INPUT
-        #region Input Methods 
-
-        private void OnMovementCanceled(InputAction.CallbackContext context)
+        protected virtual void OnMovementCanceled(InputAction.CallbackContext context)
         {
             stateMachine.ChangeState(stateMachine.IdlingState);
         }
 
-        #endregion
+        protected virtual void OnMove()
+        {
+            if (stateMachine.ReusableData.ShouldWalk)
+            {
+                stateMachine.ChangeState(stateMachine.WalkingState);
+
+                return;
+            }
+
+            stateMachine.ChangeState(stateMachine.RunningState);
+        }
     }
 }

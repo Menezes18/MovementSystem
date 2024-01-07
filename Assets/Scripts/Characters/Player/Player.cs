@@ -8,7 +8,8 @@ namespace MenezesMovementSystem
     [RequireComponent(typeof(PlayerInput))] // agora quando adiciona o script para o player(gameobject)  ele sempre adicionar o player input
     public class Player : MonoBehaviour
     {
-        
+        [field:Header("Referencias")]
+        [field:SerializeField] public PlayerSO Data { get; private set; }
         public Rigidbody Rigidbody { get; private set; }
         public Transform MainCameraTransform { get; private set; }
         public PlayerInput Input { get; private set; }

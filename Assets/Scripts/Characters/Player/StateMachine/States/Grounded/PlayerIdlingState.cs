@@ -16,14 +16,14 @@ namespace MenezesMovementSystem
         public override void Enter()
         {
             base.Enter();
-            speedModifier = 0f;
+            stateMachine.ReusableData.MovementSpeedModifier = 0f;
             ResetVelocity();
         }
 
         public override void Update()
         {
             base.Update();
-            if (movementInput == Vector2.zero)
+            if (stateMachine.ReusableData.MovementInput == Vector2.zero)
             {
                 return;
                 

@@ -7,27 +7,25 @@ namespace MenezesMovementSystem
 {
     public class PlayerWalkingState : PlayerGroundedState
     {
-        public PlayerWalkingState(PlayerMovementStateMachine playerMovementStateMachine) : base(
-            playerMovementStateMachine)
+        private readonly PlayerWalkData walkData;
+
+        public PlayerWalkingState(PlayerMovementStateMachine playerMovementStateMachine) : base(playerMovementStateMachine)
         {
-            
+            walkData = groundedData.WalkData;
         }
 
-        #region IState Methods
         public override void Enter()
         {
             base.Enter();
-            speedModifier = 0.225f;
+
+            stateMachine.ReusableData.MovementSpeedModifier = walkData.SpeedModifier;
         }
 
-
-        #endregion
         protected override void OnWalkToggleStarted(InputAction.CallbackContext context)
         {
             base.OnWalkToggleStarted(context);
+
             stateMachine.ChangeState(stateMachine.RunningState);
         }
-    
-        
     }
 }
