@@ -1,5 +1,6 @@
 
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace MenezesMovementSystem
 {
@@ -17,12 +18,15 @@ public class PlayerMovementState : IState
         protected Vector3 dampedTargetRotationCurrentVelocity;
         protected Vector3 dampedTargetRotationPassedTime;
 
+        protected bool shouldWalk;
+
         public PlayerMovementState(PlayerMovementStateMachine playerMovementStateMachine)
         {
             stateMachine = playerMovementStateMachine;
 
             InitializeData();
         }
+        
 
         private void InitializeData()
         {
@@ -31,7 +35,10 @@ public class PlayerMovementState : IState
 
         public virtual void Enter()
         {
+            Debug.Log("State" + GetType().Name);
+            AddInputActionsCallback();
         }
+        
 
         public virtual void Exit()
         {
@@ -174,6 +181,33 @@ public class PlayerMovementState : IState
 
             return playerHorizontalVelocity;
         }
+
+        protected void ResetVelocity()
+        {
+            stateMachine.Player.Rigidbody.velocity = Vector3.zero;
+        }
+        protected virtual void AddInputActionsCallback()
+        {
+            stateMachine.Player.Input.PlayerActions.WalkToggle.started += OnWalkToggleStarted;
+        }
+
         
+
+        protected virtual void RemoveInputActionsCallBack()
+        {
+            stateMachine.Player.Input.PlayerActions.WalkToggle.started -= OnWalkToggleStarted;
+
+        }
+
+
+        #region Input Methods
+
+        protected virtual void OnWalkToggleStarted(InputAction.CallbackContext context)
+        {
+            shouldWalk = !shouldWalk;
+            
+        }
+
+        #endregion
     }
 }
