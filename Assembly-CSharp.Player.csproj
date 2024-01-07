@@ -61,6 +61,7 @@
      <Compile Include="Assets\Scripts\Characters\Player\StateMachine\States\Grounded\PlayerGroundedState.cs" />
      <Compile Include="Assets\Scripts\Camera\CameraZoom.cs" />
      <Compile Include="Assets\Scripts\Characters\Player\Data\States\Grounded\Moving\PlayerRunData.cs" />
+     <Compile Include="Assets\Scripts\Characters\Player\StateMachine\States\Grounded\Moving\PlayerMovingState.cs" />
      <Compile Include="Assets\Scripts\Characters\Player\Utilities\Input\PlayerInput.cs" />
      <Compile Include="Assets\Scripts\Characters\Player\StateMachine\States\Grounded\Moving\PlayerSprintingState.cs" />
      <Compile Include="Assets\Scripts\Characters\Player\StateMachine\States\Grounded\StateMachine\StateMachine.cs" />

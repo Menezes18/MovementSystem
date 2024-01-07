@@ -61,6 +61,7 @@
      <Compile Include="Assets\Scripts\Characters\Player\StateMachine\States\Grounded\PlayerGroundedState.cs" />
      <Compile Include="Assets\Scripts\Camera\CameraZoom.cs" />
      <Compile Include="Assets\Scripts\Characters\Player\Data\States\Grounded\Moving\PlayerRunData.cs" />
+     <Compile Include="Assets\Scripts\Characters\Player\StateMachine\States\Grounded\Moving\PlayerMovingState.cs" />
      <Compile Include="Assets\Scripts\Characters\Player\Utilities\Input\PlayerInput.cs" />
      <Compile Include="Assets\Scripts\Characters\Player\StateMachine\States\Grounded\Moving\PlayerSprintingState.cs" />
      <Compile Include="Assets\Scripts\Characters\Player\StateMachine\States\Grounded\StateMachine\StateMachine.cs" />
@@ -104,6 +105,7 @@
      <Folder Include="Assets\Animations\Characters\Player\Clips\Grounded\Stop" />
      <None Include="Library\PackageCache\com.unity.visualscripting@1.9.0\package.json" />
      <Folder Include="Assets\Materials\Prototype Textures\Materials\Red" />
+     <Folder Include="Assets\ScriptableObjects\Characteres" />
      <None Include="Library\PackageCache\com.unity.timeline@1.7.5\ValidationExceptions.json" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.2.0\package.json" />
      <Folder Include="Assets\InputActions" />
@@ -119,6 +121,8 @@
      <None Include="Library\PackageCache\com.unity.ide.visualstudio@2.0.18\package.json" />
      <Folder Include="Assets\Scripts\Characters\Player\StateMachine" />
      <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\ValidationExceptions.json" />
+     <Folder Include="Assets\Materials\Physics" />
+     <Folder Include="Assets\ScriptableObjects" />
      <Folder Include="Assets\Materials\Prototype Textures\Source Files" />
      <None Include="Library\PackageCache\com.unity.ide.rider@3.0.24\package.json" />
      <None Include="Library\PackageCache\com.unity.searcher@4.9.2\package.json" />
@@ -160,6 +164,7 @@
      <Folder Include="Library\PackageCache\com.unity.ide.rider@3.0.24" />
      <Folder Include="Assets\Materials\Prototype Textures\Materials\Pink" />
      <Folder Include="Library\PackageCache\com.unity.searcher@4.9.2\Tests" />
+     <Folder Include="Assets\ScriptableObjects\Characteres\Player" />
      <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Editor Resources\Shaders\TMP_SDF_SSD.cginc" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.2.0\ValidationConfig.json" />
      <Folder Include="Assets\Materials\Prototype Textures\Textures\Yellow" />

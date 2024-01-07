@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 namespace MenezesMovementSystem
 {
-    public class PlayerRunningState : PlayerGroundedState
+    public class PlayerRunningState : PlayerMovingState
     {
         private readonly PlayerRunData runData;
 
