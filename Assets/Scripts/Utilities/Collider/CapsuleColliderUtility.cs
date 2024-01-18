@@ -1,6 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace MenezesMovementSystem
@@ -12,6 +10,15 @@ namespace MenezesMovementSystem
        [field: SerializeField] public DefaultColliderData DefaultColliderData { get; private set; }
        [field: SerializeField] public SlopeData SlopeData { get; private set; }
 
+       public void Initialize(GameObject gameObject)
+       {
+           if (CapsuleColliderData != null)
+           {
+               return;
+           }
+           CapsuleColliderData = new CapsuleColliderData();
+           CapsuleColliderData.Initialize(gameObject);
+       }
        public void CalculateCapsuleColliderDimensions()
        {
            SetCapsuleColliderRadius(DefaultColliderData.Radius);
@@ -19,6 +26,14 @@ namespace MenezesMovementSystem
            SetCapsuleColliderHeight(DefaultColliderData.Heigh * (1f - SlopeData.StepHeightPercentage));
 
            RecalculateCapsuleColliderCenter();
+
+           float halfColliderHeight = CapsuleColliderData.Collider.height / 2f;
+           
+           if (halfColliderHeight< CapsuleColliderData.Collider.radius)
+           {
+               SetCapsuleColliderRadius(halfColliderHeight);
+           } 
+           CapsuleColliderData.UpdateColliderData();
        }
 
 

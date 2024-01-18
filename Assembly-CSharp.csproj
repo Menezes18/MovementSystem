@@ -50,6 +50,7 @@
      <Compile Include="Assets\InputActions\Chacaracters\Player\PlayerInputActions.cs" />
      <Compile Include="Assets\Scripts\Characters\Player\StateMachine\States\Grounded\PlayerIdlingState.cs" />
      <Compile Include="Assets\Scripts\Characters\Player\StateMachine\States\Grounded\StateMachine\IState.cs" />
+     <Compile Include="Assets\Scripts\Characters\Player\Data\Layers\PlayerLayerData.cs" />
      <Compile Include="Assets\Scripts\Data\Collider\DefaultColliderData.cs" />
      <Compile Include="Assets\Scripts\Characters\Player\Player.cs" />
      <Compile Include="Assets\Scripts\Characters\Player\StateMachine\States\Grounded\Moving\PlayerRunningState.cs" />
@@ -193,6 +194,7 @@
      <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\PackageConversionData_Assets.json" />
      <None Include="Library\PackageCache\com.unity.mathematics@1.2.6\ValidationExceptions.json" />
      <Folder Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Package Resources" />
+     <Folder Include="Assets\Scripts\Characters\Player\Data\Layers" />
      <Folder Include="Assets\Materials\Prototype Textures\Demo" />
      <None Include="Library\PackageCache\com.unity.burst@1.8.8\Unity.Burst.Unsafe.xml" />
      <Folder Include="Assets\InputActions\Chacaracters\Player" />

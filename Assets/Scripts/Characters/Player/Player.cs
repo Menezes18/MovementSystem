@@ -10,6 +10,8 @@ namespace MenezesMovementSystem
     {
         [field:Header("Referencias")]
         [field:SerializeField] public PlayerSO Data { get; private set; }
+        [field: Header("Collisions")]
+        [field:SerializeField] public  CapsuleColliderUtility ColliderUtility { get; private set; }
         public Rigidbody Rigidbody { get; private set; }
         public Transform MainCameraTransform { get; private set; }
         public PlayerInput Input { get; private set; }
@@ -20,8 +22,16 @@ namespace MenezesMovementSystem
         {
             Rigidbody = GetComponent<Rigidbody>();
             Input = GetComponent<PlayerInput>(); // 
+            ColliderUtility.Initialize(gameObject);
+            ColliderUtility.CalculateCapsuleColliderDimensions();
             MainCameraTransform = Camera.main.transform;
             _movementStateMachine = new PlayerMovementStateMachine(this);
+        }
+
+        private void OnValidate()
+        {
+            ColliderUtility.Initialize(gameObject);
+            ColliderUtility.CalculateCapsuleColliderDimensions();
         }
 
         private void Start()
